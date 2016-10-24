@@ -8,7 +8,7 @@ UI開発基盤のテストを行う際に使用するプロジェクトです。
 2. コマンドプロンプトを起動してください。
 3. 環境変数http_proxyを設定し、nablarch_plugins_bundle/bin/setup.batを実行してください。
 4. nablarch_plugins_bundle\node_modulesのジャンクションを、nablarch_ui_plugins_test/ui_plugins に作成してください。
-  コマンド例は以下の通り。
+  コマンド例は以下の通りです。
 ```
   mklink /j C:\nablarch\workspace\nablarch_plugins_bundle_test\ui_plugins\node_modules C:\nablarch\workspace\nablarch_plugins_bundle\node_modules
 ```
