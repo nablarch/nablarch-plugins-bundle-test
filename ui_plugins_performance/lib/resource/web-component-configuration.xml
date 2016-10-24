@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component-configuration
+    xmlns="http://tis.co.jp/nablarch/component-configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://tis.co.jp/nablarch/component-configuration  ./component-configuration.xsd">
+
+  <!-- パッケージマッピングの設定 -->
+  <component name="packageMapping"
+              class="nablarch.fw.web.handler.HttpRequestJavaPackageMapping">
+    <property name="baseUri" value="/action/"/>
+    <property name="basePackage" value="please.change.me.tutorial"/>
+  </component>
+
+  <!-- スタイルシートマッピングの設定 -->
+  <component name="cssMapping"
+              class="nablarch.fw.web.handler.ResourceMapping">
+    <property name="baseUri" value="/"/>
+    <property name="basePath" value="servlet:///"/>
+  </component>
+
+  <!-- javascriptマッピングの設定 -->
+  <component name="jsMapping"
+              class="nablarch.fw.web.handler.ResourceMapping">
+    <property name="baseUri" value="/"/>
+    <property name="basePath" value="servlet:///"/>
+  </component>
+
+  <!-- jpgマッピングの設定 -->
+  <component name="jpgMapping"
+              class="nablarch.fw.web.handler.ResourceMapping">
+    <property name="baseUri" value="/"/>
+    <property name="basePath" value="servlet:///"/>
+  </component>
+
+  <component name="pngMapping"
+      class="nablarch.fw.web.handler.ResourceMapping">
+    <property name="baseUri" value="/"/>
+    <property name="basePath" value="servlet:///"/>
+  </component>
+
+  <component name="webFrontController" class="nablarch.fw.web.servlet.WebFrontController">
+    <property name="handlerQueue">
+      <list>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="/action//"/>
+          <property name="handler" ref="packageMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.css"/>
+          <property name="handler" ref="cssMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.less"/>
+          <property name="handler" ref="cssMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.template"/>
+          <property name="handler" ref="jsMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.js"/>
+          <property name="handler" ref="jsMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.jpg"/>
+          <property name="handler" ref="jpgMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.png"/>
+          <property name="handler" ref="pngMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.eot"/>
+          <property name="handler" ref="pngMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.woff"/>
+          <property name="handler" ref="pngMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.ttf"/>
+          <property name="handler" ref="pngMapping"/>
+        </component>
+        <component class="nablarch.fw.RequestHandlerEntry">
+          <property name="requestPattern" value="//*.svg"/>
+          <property name="handler" ref="pngMapping"/>
+        </component>
+      </list>
+    </property>
+  </component>
+
+  <component name="customTagConfig" class="nablarch.common.web.tag.CustomTagConfig">
+    <property name="useHiddenEncryption" value="false" />
+  </component>
+
+</component-configuration>

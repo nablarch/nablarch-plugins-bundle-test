@@ -1,0 +1,15 @@
+{ "name"   : "performance_test"
+, "version": "1.0.0"
+, "private": true
+
+, "dependencies":
+  { "modules":"node_modulesにLinkはって対応しているので使っていません。"
+  }
+
+, "devDependencies":
+  { "modules":"node_modulesにLinkはって対応しているので使っていません。"
+  }
+
+, "scripts": {}
+
+}
